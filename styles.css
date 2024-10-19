@@ -1,0 +1,203 @@
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Barra de navegación superior */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3a3a3a;
+    padding: 10px;
+    color: white;
+    position: relative;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-buttons button {
+    background-color: #2e2e2e;
+    border: none;
+    color: white;
+    margin-right: 5px;
+    padding: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.address-bar {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 0 10px;
+    border: none;
+    background-color: white;
+    color: #333;
+}
+
+#home-btn, #favorites-btn, #menu-btn {
+    background-color: #2e2e2e;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+}
+
+.status-indicator {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 4px 8px;
+    background-color: #ffa500;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-right: 10px;
+    visibility: hidden;
+}
+
+/* Sección de pestañas */
+.tabs {
+    display: flex;
+    background-color: #e0e0e0;
+    padding: 5px;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-right: 5px;
+    background-color: #c4c4c4;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab.active {
+    background-color: white;
+}
+
+.tab span {
+    margin-right: 10px;
+}
+
+.close-tab {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.new-tab {
+    padding: 8px;
+    background-color: #5a5a5a;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Contenido principal */
+main {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    overflow: auto;
+}
+
+.content h1 {
+    color: #333;
+}
+
+.content p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Pie de página */
+footer {
+    background-color: #3a3a3a;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.footer-icons button {
+    background-color: #2e2e2e;
+    border: none;
+    color: white;
+    padding: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode header {
+    background-color: #2e2e2e;
+}
+
+.dark-mode .tabs {
+    background-color: #3e3e3e;
+}
+
+.dark-mode main {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+/* Mensaje de advertencia de cerrar pestaña */
+#close-warning {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-warning.hidden {
+    display: none;
+}
+
+#close-warning button {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#close-warning #close-confirm {
+    background-color: #ff4f4f;
+    color: white;
+}
+
+#close-warning #close-cancel {
+    background-color: #4caf50;
+    color: white;
+}

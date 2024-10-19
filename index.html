@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegador Heurístico Mejorado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de navegación superior -->
+    <header>
+        <div class="nav-buttons">
+            <button id="back-btn">&#x2190;</button>
+            <button id="forward-btn">&#x2192;</button>
+            <button id="reload-btn">&#x21bb;</button>
+        </div>
+        <input type="text" class="address-bar" placeholder="Escribe una URL o busca...">
+        <button id="home-btn">&#x2302;</button>
+        <button id="favorites-btn">&#9733;</button>
+        <button id="menu-btn">&#9776;</button>
+        <div class="status-indicator" id="status">Cargando...</div>
+    </header>
+
+    <!-- Sección de pestañas -->
+    <section class="tabs">
+        <div class="tab">
+            <span>Google</span>
+            <button class="close-tab">&times;</button>
+        </div>
+        <div class="tab active">
+            <span>OpenAI</span>
+            <button class="close-tab">&times;</button>
+        </div>
+        <div class="new-tab">+</div>
+    </section>
+
+    <!-- Contenedor principal para mostrar contenido web -->
+    <main>
+        <div class="content">
+            <h1>Bienvenido a tu navegador heurístico</h1>
+            <p>Este es un diseño de navegador que optimiza la usabilidad siguiendo las heurísticas.</p>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-icons">
+            <button>Zoom &#x1f50e;</button>
+            <button>Imprimir &#x2399;</button>
+            <button>Captura de pantalla &#x1f4f7;</button>
+            <button id="dark-mode-toggle">&#x1f319;</button>
+        </div>
+    </footer>
+
+    <!-- Mensaje de advertencia sobre cerrar pestañas -->
+    <div id="close-warning" class="hidden">
+        <p>Estás a punto de cerrar esta pestaña. ¿Seguro que quieres hacerlo?</p>
+        <button id="close-confirm">Sí</button>
+        <button id="close-cancel">No</button>
+    </div>
+</body>
+</html>
